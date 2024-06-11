@@ -1,5 +1,23 @@
 package com.example.chatbot;
 
+/*Projeto (PSC) – A3: 1º Semestre/2024
+ *Desenvolvimento de Chatbot em Java com Vetores
+ *Instituiçāo: UAM Mooca
+ *UC: Programa de Soluçōes Computacionais
+ *Prof. Raul Bastos
+ *Alunos: 
+ -Alex Mota Almeida - RA: 12524115198 - ADS-1º semestre
+ -edu
+ -vini
+ -ruan
+ -joão
+ -matheus
+ -matheus bagaçador de veia
+ -sasa
+ -vitor        
+ Versão 1.3
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
