@@ -103,16 +103,24 @@ public class ChatBot {
         bancoRespostas.put("projeto","Este projeto tem como objetivo proporcionar aos estudantes a oportunidade de aplicar seus conhecimentos e habilidades no desenvolvimento de uma aplicação Java, incorporando princípios de lógica de programação.");
         bancoRespostas.put("participantes","O número máximo de participantes por grupo é de 6 ou mais conforme combinado com o professor.");
         bancoRespostas.put("grupo","O número máximo de participantes por grupo é de 6 ou mais conforme combinado com o professor.");
-        bancoRespostas.put("key1","resposta1");
-        bancoRespostas.put("key2","resposta2");
-        bancoRespostas.put("key3","resposta3");
-        bancoRespostas.put("key4","resposta4");
-        bancoRespostas.put("key5","resposta5");
-        bancoRespostas.put("key6","resposta6");
-        bancoRespostas.put("key7","resposta7");
-        bancoRespostas.put("key8","resposta8");
-        bancoRespostas.put("key9","resposta9");
-        bancoRespostas.put("key10","resposta10");
+        bancoRespostas.put("Quem é considerado o pai da ciência da Computação?","Alan Turing é frequentemente considerado o pai da ciência da computação, devido aos seus trabalhos fundamentais sobre computação, criptografia e inteligência artificial.");
+        bancoRespostas.put("Quem foi a primeira programadora da história?","Ada Lovelace é frequentemente reconhecida como a primeira programadora da história, tendo desenvolvido algoritmos para a máquina analítica de Charles Babbage no século XIX.");
+        bancoRespostas.put("O que é um algoritmo?","Um algoritmo é um conjunto finito de passos bem definidos e ordenados que levam à solução de um problema ou realização de uma tarefa específica.");
+        bancoRespostas.put("Qual foi o primeiro computador eletrônico digital?","O ENIAC (Electronic Numerical Integrator and Computer) foi o primeiro computador eletrônico digital, concluído em 1946.");
+        bancoRespostas.put("O que é um vírus de computador?","Um vírus de computador é um programa malicioso que se replica e se espalha entre os computadores, muitas vezes causando danos aos sistemas ou roubando informações. Eles podem se espalhar através de redes, dispositivos USB infectados e e-mails maliciosos.");
+        bancoRespostas.put("O que é uma linguagem de programação de alto nível?","Uma linguagem de programação de alto nível é uma linguagem que possui abstração de detalhes da máquina e é mais compreensível para os humanos. Exemplos incluem Python, Java e C++.");
+        bancoRespostas.put("Qual o maior código de programação do mundo?","Código fonte do Google ultrapassa a marca de 2 bilhões de linhas.");
+        bancoRespostas.put("Quantas linguagem de programção existem?","Aproximadamente o número ultrapassa 1300");
+        bancoRespostas.put("Qual foi a primeira capital do Brasil?","Salvador, na Bahia, foi a primeira capital do Brasil, de 1549 até 1763.");
+        bancoRespostas.put("Qual foi a primeira universidade do Brasil?","A Universidade de São Paulo (USP), fundada em 1934, é considerada a primeira universidade do Brasil.");
+        bancoRespostas.put("Quantas medalhas olímpicas o Brasil tem?","151: 37 Ouro · 42 Prata · 72 Bronze");
+        bancoRespostas.put("Quem é Maria da Penha?","Maria da Penha Maia Fernandes é uma ativista brasileira nascida em 1º de dezembro de 1945 em Fortaleza, Ceará, que se tornou um símbolo na luta contra a violência doméstica no Brasil.");
+        bancoRespostas.put("Quem foi Napoleão Bonaparte?","Napoleão Bonaparte foi um líder militar e político francês que se tornou imperador dos franceses e dominou a maior parte da Europa no início do século XIX.");
+        bancoRespostas.put("Quem foi William Shakespeare?","William Shakespeare foi um renomado dramaturgo e poeta inglês do século XVI e XVII, conhecido por suas peças teatrais como "Romeu e Julieta" e "Hamlet".");
+        bancoRespostas.put("Quem foi Martin Luther King Jr.?","Martin Luther King Jr. foi um líder dos direitos civis nos Estados Unidos, conhecido por sua luta pacífica contra a segregação racial e pela promoção da igualdade.");
+        bancoRespostas.put("Quem foi Isaac Newton?","Isaac Newton foi um cientista inglês do século XVII, famoso por suas descobertas em física e matemática, incluindo as leis do movimento e a lei da gravitação universal.");
+        bancoRespostas.put("Quem foi Galileu Galilei?","Galileu Galilei foi um cientista italiano do século XVI e XVII, conhecido por suas contribuições para a astronomia, física e desenvolvimento do telescópio.");
+     
         for(String c: bancoRespostas.keySet()){
             if(input.contains(c)){
                 output=bancoRespostas.get(c);
