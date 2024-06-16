@@ -183,7 +183,8 @@ public class ChatBot {
                  descricaoDoClima = "Chuviscando";
               }
   
-              return "O tempo em " + cidade + " est\u00e1 " + descricaoDoClima + " com temperatura de " + temperatura + "\u00b0C e sensacao t\u00e9rmica de " + temperaturaTermica;
+              return "O tempo em " + cidade + " está " + descricaoDoClima + " com temperatura de " + temperatura + "°C e sensação térmica de " + temperaturaTermica;
+
            }
         } catch (Exception var16) {
            var16.printStackTrace();
