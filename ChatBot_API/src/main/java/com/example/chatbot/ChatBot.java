@@ -7,14 +7,14 @@ package com.example.chatbot;
  *Prof. Raul Bastos
  *Alunos: 
  -Alex Mota Almeida - RA: 12524115198 - ADS-1º semestre
- -edu
- -vini
- -ruan
- -joão
+ -Eduardo Oliveira dos Santos - RA: 12524119946 - Ciência da Computação - 1º semestre 
+ -Vinicius Alves Frabetti - RA: 12524110973 - Ciência da Computação  - 1º semestre
+ -Darllyson Juan Batista Araujo - RA: 12524141685 - ADS - 1º semestre
+ -joão Vitor Bione Ribeiro de Souza Mateus - RA: 12524129408
  -matheus
- -matheus bagaçador de veia
- -sasa
- -Vittor Mateus Rodrigues - RA: 1252419997 - ADS-1º semestre    
+ -Mateus Victor Franco de Souza - RA: 12524129538 - ADS - 1º semestre
+ -Saulo Silva Conceição - RA: 12524149047 - ADS - 1º Semestre
+ -Vittor Mateus Rodrigues - RA: 1252419997 - ADS - 1º semestre    
  Versão 1.3
  */
 
