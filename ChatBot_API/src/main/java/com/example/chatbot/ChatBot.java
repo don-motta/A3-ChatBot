@@ -123,7 +123,7 @@ public class ChatBot {
         bancoRespostas.put("martin luther king","Martin Luther King Jr. foi um líder dos direitos civis nos Estados Unidos, conhecido por sua luta pacífica contra a segregação racial e pela promoção da igualdade.");
         bancoRespostas.put("isaac newton","Isaac Newton foi um cientista inglês do século XVII, famoso por suas descobertas em física e matemática, incluindo as leis do movimento e a lei da gravitação universal.");
         bancoRespostas.put("galileu galilei","Galileu Galilei foi um cientista italiano do século XVI e XVII, conhecido por suas contribuições para a astronomia, física e desenvolvimento do telescópio.");
-        bancoRespostas.put("vr","NÃO ACEITAMOS VR!!!"};
+        bancoRespostas.put("vr","NÃO ACEITAMOS VR!!!");
      
         for(String c: bancoRespostas.keySet()){
             if(input.contains(c)){
