@@ -6,16 +6,16 @@ package com.example.chatbot;
  *UC: Programa de Soluçōes Computacionais
  *Prof. Raul Bastos
  *Alunos: 
- -Alex Mota Almeida - RA: 12524115198 - ADS-1º semestre
- -Eduardo Oliveira dos Santos - RA: 12524119946 - Ciência da Computação - 1º semestre 
- -Vinicius Alves Frabetti - RA: 12524110973 - Ciência da Computação  - 1º semestre
- -Darllyson Juan Batista Araujo - RA: 12524141685 - ADS - 1º semestre
- -joão Vitor Bione Ribeiro de Souza Mateus - RA: 12524129408
- -matheus
- -Mateus Victor Franco de Souza - RA: 12524129538 - ADS - 1º semestre
- -Saulo Silva Conceição - RA: 12524149047 - ADS - 1º Semestre
- -Vittor Mateus Rodrigues - RA: 1252419997 - ADS - 1º semestre    
- Versão 1.3
+ -Alex Mota Almeida                        - RA: 12524115198 - ADS - 1º semestre
+ -Eduardo Oliveira dos Santos              - RA: 12524119946 - Ciência da Computação - 1º semestre 
+ -Vinicius Alves Frabetti                  - RA: 12524110973 - Ciência da Computação - 1º semestre
+ -Darllyson Juan Batista Araujo            - RA: 12524141685 - ADS - 1º semestre
+ -João Vitor Bione Ribeiro de Souza Mateus - RA: 12524129408
+ -Matheus Cardoso Curvelo                  - RA: 12524143790
+ -Mateus Victor Franco de Souza            - RA: 12524129538 - ADS - 1º semestre
+ -Saulo Silva Conceição                    - RA: 12524149047 - ADS - 1º Semestre
+ -Vittor Mateus Rodrigues                  - RA: 1252419997  - ADS - 1º semestre    
+ Versão 1.4
  */
 
 import java.io.BufferedReader;
@@ -54,23 +54,19 @@ public class ChatBot {
        System.out.println("Como posso te ajudar " + nome + "? (favor, não utilize acentos)");
        input = sc.nextLine().toLowerCase();
        do {
-           if (input.contains("calcular")) {
+           if (input.contains("calcular")||input.contains("calculadora")) {
                System.out.println("Abrindo a calculadora...");
             //Caso o input seja "calcular" o programa abrira um novo caminho (thread), sem fechar o caminho "principal"
-               new Thread(() -> Calculadora.main(new String[]{})).start();
-               System.out.println("\nEm que mais eu poderia te ajudar? (Ou digite 'encerrar' para encerrar o atendimento)");
-               input = sc.nextLine().toLowerCase();
-           } else if (input.contains("jogo da forca")) {
+               new Thread(() -> Calculadora.main(new String[]{})).start();               
+           } else if (input.contains("jogo da forca")||input.contains("forca")) {
                System.out.println("Iniciando jogo da forca");
                new Thread(() -> JogoDaForca.main(new String[]{})).start();
-               System.out.println("\nEm que mais eu poderia te ajudar? (Ou digite 'encerrar' para encerrar o atendimento)");
-               input = sc.nextLine().toLowerCase();
            } else {
                String output = bancoRespostas(input);
-               System.out.println("\nResp: " + output);
-               System.out.println("\nEm que mais eu poderia te ajudar? (Ou digite 'encerrar' para encerrar o atendimento)");
-               input = sc.nextLine().toLowerCase();
+               System.out.println("\nResp: " + output);              
            }
+           System.out.println("\nEm que mais eu poderia te ajudar? (Ou digite 'encerrar' para encerrar o atendimento)");
+           input = sc.nextLine().toLowerCase();
        } while (!input.equals("encerrar"));
 
        // Finalização do programa
@@ -104,23 +100,29 @@ public class ChatBot {
         bancoRespostas.put("projeto","Este projeto tem como objetivo proporcionar aos estudantes a oportunidade de aplicar seus conhecimentos e habilidades no desenvolvimento de uma aplicação Java, incorporando princípios de lógica de programação.");
         bancoRespostas.put("participantes","O número máximo de participantes por grupo é de 6 ou mais conforme combinado com o professor.");
         bancoRespostas.put("grupo","O número máximo de participantes por grupo é de 6 ou mais conforme combinado com o professor.");
-        bancoRespostas.put("Quem é considerado o pai da ciência da Computação?","Alan Turing é frequentemente considerado o pai da ciência da computação, devido aos seus trabalhos fundamentais sobre computação, criptografia e inteligência artificial.");
-        bancoRespostas.put("Quem foi a primeira programadora da história?","Ada Lovelace é frequentemente reconhecida como a primeira programadora da história, tendo desenvolvido algoritmos para a máquina analítica de Charles Babbage no século XIX.");
-        bancoRespostas.put("O que é um algoritmo?","Um algoritmo é um conjunto finito de passos bem definidos e ordenados que levam à solução de um problema ou realização de uma tarefa específica.");
-        bancoRespostas.put("Qual foi o primeiro computador eletrônico digital?","O ENIAC (Electronic Numerical Integrator and Computer) foi o primeiro computador eletrônico digital, concluído em 1946.");
-        bancoRespostas.put("O que é um vírus de computador?","Um vírus de computador é um programa malicioso que se replica e se espalha entre os computadores, muitas vezes causando danos aos sistemas ou roubando informações. Eles podem se espalhar através de redes, dispositivos USB infectados e e-mails maliciosos.");
-        bancoRespostas.put("O que é uma linguagem de programação de alto nível?","Uma linguagem de programação de alto nível é uma linguagem que possui abstração de detalhes da máquina e é mais compreensível para os humanos. Exemplos incluem Python, Java e C++.");
-        bancoRespostas.put("Qual o maior código de programação do mundo?","Código fonte do Google ultrapassa a marca de 2 bilhões de linhas.");
-        bancoRespostas.put("Quantas linguagem de programção existem?","Aproximadamente o número ultrapassa 1300");
-        bancoRespostas.put("Qual foi a primeira capital do Brasil?","Salvador, na Bahia, foi a primeira capital do Brasil, de 1549 até 1763.");
-        bancoRespostas.put("Qual foi a primeira universidade do Brasil?","A Universidade de São Paulo (USP), fundada em 1934, é considerada a primeira universidade do Brasil.");
-        bancoRespostas.put("Quantas medalhas olímpicas o Brasil tem?","151: 37 Ouro · 42 Prata · 72 Bronze");
-        bancoRespostas.put("Quem é Maria da Penha?","Maria da Penha Maia Fernandes é uma ativista brasileira nascida em 1º de dezembro de 1945 em Fortaleza, Ceará, que se tornou um símbolo na luta contra a violência doméstica no Brasil.");
-        bancoRespostas.put("Quem foi Napoleão Bonaparte?","Napoleão Bonaparte foi um líder militar e político francês que se tornou imperador dos franceses e dominou a maior parte da Europa no início do século XIX.");
-        bancoRespostas.put("Quem foi William Shakespeare?","William Shakespeare foi um renomado dramaturgo e poeta inglês do século XVI e XVII, conhecido por suas peças teatrais como 'Romeu e Julieta' e 'Hamlet'.");
-        bancoRespostas.put("Quem foi Martin Luther King Jr.?","Martin Luther King Jr. foi um líder dos direitos civis nos Estados Unidos, conhecido por sua luta pacífica contra a segregação racial e pela promoção da igualdade.");
-        bancoRespostas.put("Quem foi Isaac Newton?","Isaac Newton foi um cientista inglês do século XVII, famoso por suas descobertas em física e matemática, incluindo as leis do movimento e a lei da gravitação universal.");
-        bancoRespostas.put("Quem foi Galileu Galilei?","Galileu Galilei foi um cientista italiano do século XVI e XVII, conhecido por suas contribuições para a astronomia, física e desenvolvimento do telescópio.");
+        bancoRespostas.put("pai da computacao","Alan Turing é frequentemente considerado o pai da ciência da computação, devido aos seus trabalhos fundamentais sobre computação, criptografia e inteligência artificial.");
+        bancoRespostas.put("ciencia da computacao","Alan Turing é frequentemente considerado o pai da ciência da computação, devido aos seus trabalhos fundamentais sobre computação, criptografia e inteligência artificial.");
+        bancoRespostas.put("alan turing","Alan Turing é frequentemente considerado o pai da ciência da computação, devido aos seus trabalhos fundamentais sobre computação, criptografia e inteligência artificial.");
+        bancoRespostas.put("primeira programadora","Ada Lovelace é frequentemente reconhecida como a primeira programadora da história, tendo desenvolvido algoritmos para a máquina analítica de Charles Babbage no século XIX.");
+        bancoRespostas.put("ada lovelace","Ada Lovelace é frequentemente reconhecida como a primeira programadora da história, tendo desenvolvido algoritmos para a máquina analítica de Charles Babbage no século XIX.");
+        bancoRespostas.put("algoritmo","Um algoritmo é um conjunto finito de passos bem definidos e ordenados que levam à solução de um problema ou realização de uma tarefa específica.");
+        bancoRespostas.put("primeiro computador","O ENIAC (Electronic Numerical Integrator and Computer) foi o primeiro computador eletrônico digital, concluído em 1946.");
+        bancoRespostas.put("computador eletronico","O ENIAC (Electronic Numerical Integrator and Computer) foi o primeiro computador eletrônico digital, concluído em 1946.");
+        bancoRespostas.put("computador digital","O ENIAC (Electronic Numerical Integrator and Computer) foi o primeiro computador eletrônico digital, concluído em 1946.");
+        bancoRespostas.put("eniac","O ENIAC (Electronic Numerical Integrator and Computer) foi o primeiro computador eletrônico digital, concluído em 1946.");
+        bancoRespostas.put("virus de computador","Um vírus de computador é um programa malicioso que se replica e se espalha entre os computadores, muitas vezes causando danos aos sistemas ou roubando informações. Eles podem se espalhar através de redes, dispositivos USB infectados e e-mails maliciosos.");
+        bancoRespostas.put("linguagem de programacao","Uma linguagem de programação de alto nível é uma linguagem que possui abstração de detalhes da máquina e é mais compreensível para os humanos. Exemplos incluem Python, Java e C++.");
+        bancoRespostas.put("maior codigo","Código fonte do Google ultrapassa a marca de 2 bilhões de linhas.");
+        bancoRespostas.put("linguagens de programacao","Aproximadamente o número de linguagens de programação existentes no mundo ultrapassa 1300");
+        bancoRespostas.put("primeira capital do brasil","Salvador, na Bahia, foi a primeira capital do Brasil, de 1549 até 1763.");
+        bancoRespostas.put("primeira universidade do brasil","A Universidade de São Paulo (USP), fundada em 1934, é considerada a primeira universidade do Brasil.");
+        bancoRespostas.put("medalhas olimpicas","O Brasil possui até hoje 151 medalhas:\n37 de Ouro\n42 de Prata\n72 de Bronze");
+        bancoRespostas.put("maria da penha","Maria da Penha Maia Fernandes é uma ativista brasileira nascida em 1º de dezembro de 1945 em Fortaleza, Ceará, que se tornou um símbolo na luta contra a violência doméstica no Brasil.");
+        bancoRespostas.put("napoleao bonaparte","Napoleão Bonaparte foi um líder militar e político francês que se tornou imperador dos franceses e dominou a maior parte da Europa no início do século XIX.");
+        bancoRespostas.put("william shakespeare","William Shakespeare foi um renomado dramaturgo e poeta inglês do século XVI e XVII, conhecido por suas peças teatrais como 'Romeu e Julieta' e 'Hamlet'.");
+        bancoRespostas.put("martin luther king","Martin Luther King Jr. foi um líder dos direitos civis nos Estados Unidos, conhecido por sua luta pacífica contra a segregação racial e pela promoção da igualdade.");
+        bancoRespostas.put("isaac newton","Isaac Newton foi um cientista inglês do século XVII, famoso por suas descobertas em física e matemática, incluindo as leis do movimento e a lei da gravitação universal.");
+        bancoRespostas.put("galileu galilei","Galileu Galilei foi um cientista italiano do século XVI e XVII, conhecido por suas contribuições para a astronomia, física e desenvolvimento do telescópio.");
      
         for(String c: bancoRespostas.keySet()){
             if(input.contains(c)){
