@@ -14,7 +14,7 @@ package com.example.chatbot;
  -matheus
  -matheus bagaçador de veia
  -sasa
- -vitor        
+ -Vittor Mateus Rodrigues - RA: 1252419997 - ADS-1º semestre    
  Versão 1.3
  */
 
@@ -56,18 +56,19 @@ public class ChatBot {
        do {
            if (input.contains("calcular")) {
                System.out.println("Abrindo a calculadora...");
+            //Caso o input seja "calcular" o programa abrira um novo caminho (thread), sem fechar o caminho "principal"
                new Thread(() -> Calculadora.main(new String[]{})).start();
-               System.out.println("\nO que mais poderia te ajudar? (Ou digite 'encerrar' para encerrar o atendimento)");
+               System.out.println("\nEm que mais eu poderia te ajudar? (Ou digite 'encerrar' para encerrar o atendimento)");
                input = sc.nextLine().toLowerCase();
            } else if (input.contains("jogo da forca")) {
                System.out.println("Iniciando jogo da forca");
                new Thread(() -> JogoDaForca.main(new String[]{})).start();
-               System.out.println("\nO que mais poderia te ajudar? (Ou digite 'encerrar' para encerrar o atendimento)");
+               System.out.println("\nEm que mais eu poderia te ajudar? (Ou digite 'encerrar' para encerrar o atendimento)");
                input = sc.nextLine().toLowerCase();
            } else {
                String output = bancoRespostas(input);
                System.out.println("\nResp: " + output);
-               System.out.println("\nO que mais poderia te ajudar? (Ou digite 'encerrar' para encerrar o atendimento)");
+               System.out.println("\nEm que mais eu poderia te ajudar? (Ou digite 'encerrar' para encerrar o atendimento)");
                input = sc.nextLine().toLowerCase();
            }
        } while (!input.equals("encerrar"));
@@ -116,7 +117,7 @@ public class ChatBot {
         bancoRespostas.put("Quantas medalhas olímpicas o Brasil tem?","151: 37 Ouro · 42 Prata · 72 Bronze");
         bancoRespostas.put("Quem é Maria da Penha?","Maria da Penha Maia Fernandes é uma ativista brasileira nascida em 1º de dezembro de 1945 em Fortaleza, Ceará, que se tornou um símbolo na luta contra a violência doméstica no Brasil.");
         bancoRespostas.put("Quem foi Napoleão Bonaparte?","Napoleão Bonaparte foi um líder militar e político francês que se tornou imperador dos franceses e dominou a maior parte da Europa no início do século XIX.");
-        bancoRespostas.put("Quem foi William Shakespeare?","William Shakespeare foi um renomado dramaturgo e poeta inglês do século XVI e XVII, conhecido por suas peças teatrais como "Romeu e Julieta" e "Hamlet".");
+        bancoRespostas.put("Quem foi William Shakespeare?","William Shakespeare foi um renomado dramaturgo e poeta inglês do século XVI e XVII, conhecido por suas peças teatrais como 'Romeu e Julieta' e 'Hamlet'.");
         bancoRespostas.put("Quem foi Martin Luther King Jr.?","Martin Luther King Jr. foi um líder dos direitos civis nos Estados Unidos, conhecido por sua luta pacífica contra a segregação racial e pela promoção da igualdade.");
         bancoRespostas.put("Quem foi Isaac Newton?","Isaac Newton foi um cientista inglês do século XVII, famoso por suas descobertas em física e matemática, incluindo as leis do movimento e a lei da gravitação universal.");
         bancoRespostas.put("Quem foi Galileu Galilei?","Galileu Galilei foi um cientista italiano do século XVI e XVII, conhecido por suas contribuições para a astronomia, física e desenvolvimento do telescópio.");
@@ -160,6 +161,7 @@ public class ChatBot {
               }
   
               in.close();
+            //JSONObjects sao usados para converter a resposta do site, que vem em formato JSON, para strings.
               JSONObject jsonResponse = new JSONObject(response.toString());
               JSONObject condicoesAtuais = jsonResponse.getJSONObject("currentConditions");
               double temperatura = condicoesAtuais.getDouble("temp");
