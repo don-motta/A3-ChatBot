@@ -10,7 +10,7 @@ package com.example.chatbot;
  -Eduardo Oliveira dos Santos              - RA: 12524119946 - Ciência da Computação - 1º semestre 
  -Vinicius Alves Frabetti                  - RA: 12524110973 - Ciência da Computação - 1º semestre
  -Darllyson Juan Batista Araujo            - RA: 12524141685 - ADS - 1º semestre
- -João Vitor Bione Ribeiro de Souza Mateus - RA: 12524129408
+ -João Vitor Bione Ribeiro de Souza        - RA: 12524129408
  -Matheus Cardoso Curvelo                  - RA: 12524143790
  -Mateus Victor Franco de Souza            - RA: 12524129538 - ADS - 1º semestre
  -Saulo Silva Conceição                    - RA: 12524149047 - ADS - 1º Semestre
